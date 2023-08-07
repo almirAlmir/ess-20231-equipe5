@@ -9,10 +9,10 @@ class Assistindo(BaseModel):
     data_assistindo: Optional[datetime.date] = None
 
 class Anime(BaseModel):
+    id: int
     nome_anime: str
-    qtd_assistidos: List[Assistido] = []
-    qtd_assistindo: List[Assistindo] = []
-    likes: Optional[int] = 0
+    qtd_assistido: int
+    likes: Optional[float] = 0
     
     class Config:
         orm_mode = True

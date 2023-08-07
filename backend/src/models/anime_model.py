@@ -1,12 +1,11 @@
 from src.config.database import Base
-from sqlalchemy import Column, Integer, Boolean
+from sqlalchemy import Column, Integer, Boolean, Float, String
 
 class Anime(Base):
     __tablename__ = 'animes'
     
-    nome_anime
-    qtd_assistidos
-    qtd_assistindo
-    likes
-    
-    ##Vou pesquisar como utilizar o tipo List no sqlalchemy 
+    id = Column(Integer, primary_key=True, index=True)
+    nome_anime = Column(String)
+    qtd_assistido = Column(Integer)
+    likes = Column(Float)
+     

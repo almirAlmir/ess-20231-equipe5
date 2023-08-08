@@ -14,6 +14,6 @@ class RepositorioAnimes():
         
         self.db.add(db_anime)
         self.db.commit()
-        self.db.refresh()
+        self.db.refresh() #Popula toda a tabela
         
         return db_anime

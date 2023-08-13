@@ -3,6 +3,13 @@ from pytest_bdd import parsers, given, when, then, scenario
 from src.service.impl.item_service import ItemService
 from src.tests.api.utils.utils import get_response_items_list, req_type_to_function
 
+# @scenario(scenario_name="Obter lista de animes", feature_name="../features/animes.feature")
+# def test_get_anime_list():
+
+
+
+
+
 """ Scenario: Obter item por ID """
 
 # This method is used to define the scenario name and feature file path
@@ -64,9 +71,9 @@ def check_response_json_contains_item_data(context, item_id: str, item_name: str
     return context
 
 
-""" Scenario: Obter todos os itens """
+""" Scenario: Obter lista de animes """
 
-@scenario(scenario_name="Obter todos os itens", feature_name="../features/items.feature")
+@scenario(scenario_name="Obter todos os itens", feature_name="../features/animes.feature")
 def test_get_items():
     """ Get all items """
 
